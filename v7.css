@@ -1,0 +1,55 @@
+/* Scoped feedback pass. Existing palettes and layouts outside these targets are retained. */
+.paper-transition,.paper-transition.recover{height:clamp(100px,14vw,190px);min-height:0;overflow:visible;position:relative;background:var(--mint);z-index:2;pointer-events:none}
+.paper-transition.recover{background:#fff}
+.paper-pin{height:100%;min-height:0;position:relative;overflow:visible}
+.paper-svg{inset:0;width:100%;height:calc(100% + 180px);overflow:hidden}
+.paper-transition .paper-face{fill:#fff}.paper-transition.recover .paper-face{fill:var(--mint)}
+.paper-transition .paper-fiber{fill:#f7f7ef}.paper-transition .paper-shadow{opacity:.12;filter:blur(4px)}
+.paper-transition .paper-fold{filter:drop-shadow(1px 4px 3px #244d4020)}
+.paper-transition .paper-flap-shadow,.paper-transition .paper-fold-grain,.paper-transition .paper-crease{display:none}
+.notes-chapter{padding-top:0;padding-bottom:55px}.notes-chapter>.chapter-arrival{padding-top:55px;padding-bottom:45px}
+.notes-layout{min-height:470px}.notes-book-scene{height:480px}
+.notes-volume{width:310px;height:390px}.notes-page{padding:29px 25px 27px 31px}
+.notes-page h4{font-size:25px}.notes-contents .text-link{font-size:16px;line-height:1.5;padding:12px 0;gap:12px}
+.notes-contents li{margin-bottom:6px}.notes-front{backface-visibility:visible}
+.notes-front .mini-book{backface-visibility:hidden}.notes-front:after{backface-visibility:hidden}
+.notes-volume.is-open .notes-front .open-book-hint{opacity:0}
+.notes-volume.is-open .notes-page{cursor:pointer}.notes-volume .notes-contents a{cursor:pointer}
+.conversation-sheet{background:transparent;box-shadow:none}.make-panel{background:transparent}
+/* Contact only: independent colour tokens, no global palette change. */
+.contact-body{--contact-bg:#c7dfd2;--contact-ink:#244d40;--contact-accent:#8d3f5c;--contact-muted:#496458;--profile-paper:#f1e4d6;background:var(--contact-bg);color:var(--contact-ink)}
+.contact-body[data-palette=pink]{--contact-bg:#e7c4ce;--contact-ink:#49313b;--contact-accent:#315c4a;--contact-muted:#66505a;--profile-paper:#c7dfd2}
+.contact-body .contact-header{background:transparent;border-color:color-mix(in srgb,var(--contact-ink) 24%,transparent)}
+.contact-body .contact-header .wordmark,.contact-body .contact-header>a,.contact-body .motion-switch,.contact-body .contact-heading h1{color:var(--contact-ink)}
+.contact-body .contact-heading h1 em{color:var(--contact-accent)}
+.contact-body .contact-heading>.bi,.contact-body .contact-heading>p,.contact-body .contact-heading .eyebrow{color:var(--contact-muted)}
+.contact-body .contact-heading .handwriting,.contact-body .stamp-shelf-caption .handwriting{color:var(--contact-accent)}
+.contact-body .profile-book{background:var(--profile-paper)}
+.contact-body .postcard{background:#fffdf7;color:#244d40}
+.contact-body .postcard-top h2{color:#244d40}.contact-body .postcard-top p,.contact-body .postcard label span,.contact-body .delivery-note,.contact-body .note-meta{color:#52685b}
+.contact-body .postcard input::placeholder,.contact-body .postcard textarea::placeholder{color:#667469;opacity:1}
+.contact-body .stamp-shelf-caption small,.contact-body .contact-footer,.contact-body .contact-status{color:var(--contact-muted)}
+.contact-body .stamp-shelf-caption>p{color:var(--contact-ink)}
+.contact-body .send-letter{background:#244d40;color:#fffdf5;border-radius:40px;padding-inline:19px}
+.contact-body .practice-stamps>span:nth-child(2){border-radius:50%}
+/* Scalloped, perforated paper with a coordinated three-design illustrated set. */
+.contact-body .topic-stamp{--stamp-bg:#f8f1db;background:#fffcf0!important;border:0;width:118px;height:157px;padding:13px 12px 10px;filter:drop-shadow(2px 5px 3px #244d4028);box-shadow:none;clip-path:url(#stamp-perforation);isolation:isolate;color:#234d40}
+.contact-body .topic-stamp:before{inset:8px;background:var(--stamp-bg);border:1px solid #375c4930}
+.contact-body .topic-stamp:after{display:none}
+.contact-body .stamp-rust{--stamp-bg:#e7afbe;color:#5a2f42}.contact-body .stamp-blue{--stamp-bg:#bed8cd;color:#214d40}.contact-body .stamp-moss{--stamp-bg:#efe0af;color:#44543a}
+.contact-body .topic-stamp svg{width:100%;height:90px;fill:none;stroke:none;flex-shrink:0}
+.contact-body .topic-stamp .stamp-value{font-size:7px;font-weight:700;letter-spacing:1.1px}
+.contact-body .topic-stamp strong{font-size:10px;font-weight:600;line-height:1.25;white-space:nowrap}
+.contact-body .topic-stamp small{font-size:6px;letter-spacing:.6px}
+.contact-body .topic-stamp[aria-pressed=true]{translate:0 -8px;filter:drop-shadow(0 5px 0 #9e5270) drop-shadow(0 8px 5px #244d4020)}
+.contact-body .topic-stamp:focus-visible{filter:drop-shadow(0 0 3px #8d3f5c);outline:3px solid #8d3f5c;outline-offset:-8px}
+.contact-body .stamp-options{gap:18px}.contact-body .stamp-options .topic-stamp:nth-child(2){margin-top:22px}
+.contact-body .stamp-drop{border:0;outline:1px dashed #9fae99;outline-offset:5px}
+.contact-body .stamp-drop .topic-stamp{width:89px;height:118px;padding:11px 10px 9px;box-shadow:none}
+.contact-body .stamp-drop .topic-stamp svg{height:60px}.contact-body .stamp-drop .topic-stamp strong{font-size:7px}.contact-body .stamp-drop .topic-stamp small{font-size:4px}.contact-body .stamp-drop .topic-stamp .stamp-value{font-size:5px}
+@media(max-width:1100px){.contact-body .stamp-shelf{flex-wrap:wrap}.contact-body .stamp-options{gap:14px}.contact-body .topic-stamp{width:105px;height:144px}.contact-body .topic-stamp svg{height:78px}}
+@media(min-width:701px) and (max-width:1000px){.notes-volume{width:285px;height:385px}.notes-contents .text-link{font-size:15px}}
+@media(max-width:700px){.paper-transition,.paper-transition.recover{height:95px}.notes-chapter>.chapter-arrival{padding:35px 0 32px}.notes-layout{min-height:0}.notes-book-scene{height:425px;padding:28px 0}.notes-volume{width:245px;height:355px}.notes-page{padding:22px}.notes-page h4{font-size:22px}.notes-contents .text-link{font-size:14px;padding:10px 0}.notes-volume.is-open{transform:translateX(22px)}.notes-volume.is-open .notes-front{transform:rotateY(-108deg)}
+.contact-body .topic-stamp{width:96px;height:137px;padding:12px 10px 10px}.contact-body .topic-stamp svg{height:73px}.contact-body .topic-stamp strong{font-size:8px}.contact-body .topic-stamp small{font-size:5px}.contact-body .stamp-options{gap:9px}.contact-body .stamp-drop .topic-stamp{width:70px;height:98px;padding:10px 8px}.contact-body .stamp-drop .topic-stamp svg{height:47px}.contact-body .stamp-drop .topic-stamp strong{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.paper-transition,.paper-transition.recover{height:110px}.paper-pin{height:100%}}
+.static-mode .paper-transition,.static-mode .paper-transition.recover{height:110px}.static-mode .paper-pin{height:100%}
